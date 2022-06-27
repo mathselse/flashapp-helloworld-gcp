@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
   return "Hello World!"
 
+@app.route('/about')
+def about():
+  return "sucess abput page"
+
 @app.route('/<page>')
 def default(page):
   response = make_response('The page %s does not exist.' % page, 404)
